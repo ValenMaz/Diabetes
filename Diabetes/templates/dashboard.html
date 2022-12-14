@@ -1,0 +1,61 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+
+<style>
+  h1{
+    font-family: 'Lucida Sans';
+  }
+  
+  h2{
+    font-weight: bold;
+    color: DarkSlateGray;
+  }
+</style>
+
+<main role="main" style="text-align:justify">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-5">Hello! Lets Get Started with RiskAssess</h1>
+      <p>Welcome to RiskAssess!, a risk assessment system for any interesed person to generate risk assessments
+        for to know the state of health in relation to possible problems of diabetes. RiskAssess started off as a company that formed strong relationships with medical
+        institutions to help them generate their assessments with ease and maximum efficiency thus saving the
+        organization's valuable time and help to save people's life.
+        Click below to learn about the diabetes disease that RiskAssess is capable of assessing.</p>
+      <p><a class="btn btn-primary btn-lg" href="/disindex" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>1. Be Prepared</h2>
+        <p>Have the results of your medical test results handy. You need the next medical data: Glucose and Insulin Levels, 
+          Blood Pressure, Diabetes Pedigree Function, Skin Thickness and Body Mass Index.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>2. Diabetes Prediction</h2>
+        <p>Navigate to the "Diabetes" section and add the corresponding details and click on predict to learn
+          whether the patient is at the risk of this illness/disease.</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>3. Download Result </h2>
+        <p>You can download your prediction result if you want. The downloaded file will be in pdf format.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>4. Consult Your Medic</h2>
+        <p>RiskAssess is a risk assessment system to generate diabetes risk assessments, but it is only a reference tool. 
+          You should talk to your doctor about your state of health and any concerns you have about that. 
+          Follow their instructions and recommendations to preserve and protect your health.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

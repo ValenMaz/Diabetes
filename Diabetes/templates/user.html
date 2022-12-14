@@ -1,0 +1,50 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+
+<style>
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    vertical-align: center;
+    align-items: center;
+  }
+</style>
+
+<div class="container">
+
+    <h1 style="text-align:center">Hi, {{ current_user.username }}. This is your Prediction History</h1>
+    
+    <br>
+
+    <div class="row">
+        <table id="example" class="table table-striped table-bordered center" style="width:50%; text-align:center">
+            <thead>
+                <tr style="background-color: #D6EEEE">
+                    <th>Date</th>
+                    <th>Prediction Result</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.date.strftime('%d-%m-%Y') }}</td>
+                    <td>{{ prediction.result}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+            <tfoot>
+                <tr style="background-color: #D6EEEE">
+                    <th>Date</th>
+                    <th>Prediction Result</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+ {% endblock %}

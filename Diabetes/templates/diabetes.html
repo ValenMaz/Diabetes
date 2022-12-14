@@ -1,0 +1,80 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+
+<style>
+    form{
+        align-content:center;
+        vertical-align:center;
+        align-items: center;
+        text-align:center;
+    }
+    .contentCenter {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left:-500px;
+    }
+    label{
+        text-align:left;
+        align-content:left;
+        align-items: left;
+    }
+</style>
+
+
+<br /><br />
+<div style="text-align:center;">
+    <h1>Diabetes Prediction</h1>
+    <h5>Please enter your medic details</h5>
+</div>
+
+<div style="align-content:center;vertical-align:center;text-align:center;">
+    <form action="{{ url_for('predictt')}}" method="post" class="form-inline">
+        <fieldset>
+            <div class="tabcontent contentCenter" id="new">
+                <div class="form-group">
+                    <label for="pregnancies">Number of Pregnancies</label>
+                    <input class="form-control" type="number" name="pregnancies" placeholder="eg. 0" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="glucose">Glucose Level (mg/dL)</label>
+                    <input class="form-control" type="number" name="glucose" placeholder="eg. 80" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="bloodpressure">Blood Pressure (mmHg)</label>
+                    <input class="form-control" type="number" name="bloodpressure" placeholder="eg. 80" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="skinthickness">Skin Thickness (mm)</label>
+                    <input class="form-control" type="number" name="skinthickness" placeholder="eg. 20" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="insulin">Insulin Level (IU/mL) </label>
+                    <input class="form-control" type="number" name="insulin" placeholder="eg. 80" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="bmi">Body Mass Index (kg/m²)</label>
+                    <input class="form-control" type="number" name="bmi" placeholder="eg. 23" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="dpf">Diabetes Pedigree Function</label>
+                    <input class="form-control" type="text" name="dpf" placeholder="eg. 0.52" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="age">Patient Age in Years</label>
+                    <input class="form-control" type="number" name="age" placeholder="eg. 34" required="required" />
+                </div>
+            </div>
+            <div class="center">
+                <button type="submit" class="btn btn-primary btn-lg">Predict</button>
+            </div>
+        </fieldset>
+    </form>
+    
+    <br>
+
+    
+</div>
+
+{% endblock %}

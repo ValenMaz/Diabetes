@@ -1,0 +1,81 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+
+<style>
+  p {
+    text-align:justify;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    vertical-align: center;
+    align-items: center;
+  }
+
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #D6EEEE;
+  } */
+</style>
+
+<br />
+<div class="container">
+  <h1 style="text-align:center;">RiskAssess - Disease Info</h1>
+  <p>This is a informational page containing details about the diabetes and its symptoms.
+      A prediction's results table to list the possible results that RiskAssess can return is also displayed.</p>
+  <h2>Diabetes</h2>
+  <div style="text-align: center; margin-top: 20px">
+      <img style="max-width: 600px" src="static/img/diabetes.png" /><br /><br />
+  </div>
+  <p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is
+      your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps
+      glucose from food get into your cells to be used for energy.</p>
+  <h3>What health problems can people with diabetes develop? </h3>
+  <p>Over time, high blood glucose leads to problems such as</p>
+
+  <ul>
+      <li>heart disease</li>
+      <li>stroke</li>
+      <li>kidney disease</li>
+      <li>eye problems</li>
+      <li>dental disease</li>
+      <li>nerve damage</li>
+      <li>foot problems</li>
+  </ul>
+
+  
+  <h1 style="text-align:center;">Possible Prediction Results</h1>
+  <br>
+  <div>
+    <table class="center">
+        <tr style="text-align:center; background-color: #D6EEEE">
+          <th style="padding-left:15px">No. </th>
+          <th>Result</th>
+        </tr>
+  
+        <tr>
+          <td style="padding-left:15px">1</td>
+          <td>High Risk of Diabetes</td>
+        </tr>
+  
+        <tr>
+            <td style="padding-left:15px">2</td>
+            <td>Low Risk of Diabetes</td>
+        </tr>
+      </table>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
